@@ -14,6 +14,12 @@ import CreateCampaingForm from "./app,createcampaingform";
 
 const Campaings = () => {
   const [selected, setSelected] = useState<number>(0);
+  const [activate, setActivate] = useState<boolean>(false);
+
+  const handleChange = useCallback(
+    () => setActivate((prevActivate) => !prevActivate),
+    [],
+  );
 
   const handleTabChange = useCallback(
     (selectedTabIndex: number) => setSelected(selectedTabIndex),
@@ -28,7 +34,7 @@ const Campaings = () => {
             <Text variant="heading3xl" as="h2">
               Campaings
             </Text>
-            <Button>Create new</Button>
+            <Button onClick={handleChange}>Create new</Button>
           </InlineGrid>
         </Layout.Section>
         <Layout.Section>
@@ -46,7 +52,7 @@ const Campaings = () => {
           </Tabs>
         </Layout.Section>
         <Layout.Section>
-          <CreateCampaingForm />
+          <CreateCampaingForm activate={activate} />
         </Layout.Section>
       </Layout>
     </Page>

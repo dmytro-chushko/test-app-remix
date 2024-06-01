@@ -10,7 +10,9 @@ import {
 } from "@shopify/polaris";
 import { useCallback, useState } from "react";
 
-interface ICreateCampaingFormProps {}
+interface ICreateCampaingFormProps {
+  activate: boolean;
+}
 
 export const action: ActionFunction = async ({ request }) => {};
 
