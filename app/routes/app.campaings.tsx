@@ -52,7 +52,7 @@ const Campaings = () => {
           </Tabs>
         </Layout.Section>
         <Layout.Section>
-          <CreateCampaingForm activate={activate} />
+          <CreateCampaingForm activate={activate} onClose={handleChange} />
         </Layout.Section>
       </Layout>
     </Page>

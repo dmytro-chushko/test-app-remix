@@ -12,19 +12,16 @@ import { useCallback, useState } from "react";
 
 interface ICreateCampaingFormProps {
   activate: boolean;
+  onClose: () => void;
 }
 
 export const action: ActionFunction = async ({ request }) => {};
 
-const CreateCampaingForm = ({}: ICreateCampaingFormProps) => {
-  const [activate, setActivate] = useState<boolean>(false);
-
-  const handleChange = useCallback(
-    () => setActivate((prevActivate) => !prevActivate),
-    [],
-  );
-
-  const activator = <Button onClick={handleChange}>Open</Button>;
+const CreateCampaingForm = ({
+  activate,
+  onClose,
+}: ICreateCampaingFormProps) => {
+  const activator = <Button onClick={onClose}>Open</Button>;
 
   const [value, setValue] = useState<string>("default");
 
@@ -46,7 +43,7 @@ const CreateCampaingForm = ({}: ICreateCampaingFormProps) => {
         <Modal
           activator={activator}
           open={activate}
-          onClose={handleChange}
+          onClose={onClose}
           title="Create a new Email Campaing"
           primaryAction={{ content: "Send", onAction: () => {} }}
           secondaryActions={[
