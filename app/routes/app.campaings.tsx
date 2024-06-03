@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Card,
   InlineGrid,
   Layout,
@@ -34,7 +33,6 @@ const Campaings = () => {
             <Text variant="heading3xl" as="h2">
               Campaings
             </Text>
-            <Button onClick={handleChange}>Create new</Button>
           </InlineGrid>
         </Layout.Section>
         <Layout.Section>
@@ -51,9 +49,8 @@ const Campaings = () => {
             </Card>
           </Tabs>
         </Layout.Section>
-        <Layout.Section>
-          <CreateCampaingForm activate={activate} onClose={handleChange} />
-        </Layout.Section>
+        {/* <Layout.Section></Layout.Section> */}
+        <CreateCampaingForm activate={activate} onClose={handleChange} />
       </Layout>
     </Page>
   );

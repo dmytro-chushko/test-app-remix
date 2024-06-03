@@ -3,7 +3,7 @@
 client_id = "30bc22ddc9c13fb825d24da151a0c5a6"
 name = "test-app-remix"
 handle = "test-app-remix-9"
-application_url = "https://harvey-hearings-casting-expired.trycloudflare.com"
+application_url = "https://novels-college-memphis-worm.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://harvey-hearings-casting-expired.trycloudflare.com/auth/callback",
-  "https://harvey-hearings-casting-expired.trycloudflare.com/auth/shopify/callback",
-  "https://harvey-hearings-casting-expired.trycloudflare.com/api/auth/callback"
+  "https://novels-college-memphis-worm.trycloudflare.com/auth/callback",
+  "https://novels-college-memphis-worm.trycloudflare.com/auth/shopify/callback",
+  "https://novels-college-memphis-worm.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

@@ -21,7 +21,7 @@ const CreateCampaingForm = ({
   activate,
   onClose,
 }: ICreateCampaingFormProps) => {
-  const activator = <Button onClick={onClose}>Open</Button>;
+  const activator = <Button onClick={onClose}>Create New</Button>;
 
   const [value, setValue] = useState<string>("default");
 
@@ -33,7 +33,7 @@ const CreateCampaingForm = ({
   const submit = useSubmit();
   const actionData = useActionData<typeof action>();
 
-  console.log(actionData);
+  console.log(actionData, "CreateCampaingeForm");
 
   const sendEmails = () => submit({}, { replace: true, method: "POST" });
 
@@ -45,11 +45,11 @@ const CreateCampaingForm = ({
           open={activate}
           onClose={onClose}
           title="Create a new Email Campaing"
-          primaryAction={{ content: "Send", onAction: () => {} }}
+          primaryAction={{ content: "Send", onAction: sendEmails }}
           secondaryActions={[
             {
               content: "Finish Later",
-              onAction: sendEmails,
+              onAction: () => {},
             },
           ]}
         >
