@@ -49,7 +49,7 @@ const CreateCampaingForm = ({
           secondaryActions={[
             {
               content: "Finish Later",
-              onAction: () => {},
+              onAction: onClose,
             },
           ]}
         >
